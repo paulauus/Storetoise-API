@@ -18,18 +18,17 @@ def print_storage_ids(data: dict, number:int | None=None) -> None:
     limit = min(number, len(storage_ids))
     for id in sorted(storage_ids[:limit]):
       print(id)
+  if not number:
+    for id in sorted(storage_ids):
+      print(id)
 
-  for id in sorted(storage_ids):
-    print(id)
 
-def valid_value(input_num: str) -> int:
-  """Checks that the chosen number for messages display is a valid number."""
-  if not input_num.isdigit():
-    raise AssertionError("Number must be an integer between 0 and 1000.")
-  if 0 <= int(input_num) <= 1000:
-    return int(input_num)
-  else:
-    raise AssertionError("Number must be an integer between 0 and 1000.")
+def valid_value(input_num: str ) -> int:
+    """Checks that the chosen number for messages display is a valid number."""
+    if input_num:
+      if input_num.isdigit() and 0 <= int(input_num) <= 1000:
+        return int(input_num)
+      print("Number must be an integer between 0 and 1000.")
 
 def command_line_interface_input():
   """
@@ -46,4 +45,3 @@ if __name__ == "__main__":
   user_url = f"{BASE_URL}/storage/{args.username}"
   loaded_data = load_storetoise_data(user_url)
   print_storage_ids(loaded_data, args.number)
-  pass
