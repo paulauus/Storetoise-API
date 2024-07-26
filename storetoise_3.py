@@ -58,6 +58,10 @@ def valid_message(message: str) -> str:
             if not (char.islower() or char.isspace()):
                 print("Message must consist only of lowercase letters and spaces.")
         return message
+    
+def post_message(url:str, message:str) -> None:
+    """Posts a message to the given url."""
+    requests.post(url, json={"message: message"}, timeout=10)
 
 
 def command_line_interface_input():
@@ -80,6 +84,14 @@ if __name__ == "__main__":
     loaded_data = load_storetoise_data(user_url)
     print_storage_ids(loaded_data, args.number)
     if args.storage:
+        storage_url = f"{user_url}/{args.storage}"
+        storage_data = load_storetoise_data(storage_url)
+        if args.message:
+            post_message(storage_url, args.message)
+
+
+
+
         if str(args.storage) not in loaded_data["ids"]:
             print("Cannot get messages for a non-existent storage ID.")
         else:
