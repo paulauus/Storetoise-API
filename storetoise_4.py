@@ -40,18 +40,15 @@ def valid_storage_id(input_storage_id: str) -> int:
     if input_storage_id.isdigit() and len(input_storage_id) == 3:
         return int(input_storage_id)
     print("Storage ID must be a three-digit integer.")
-    sys.exit(1)
 
 
 def valid_message(message: str) -> str:
     """Checks the provided message is in a valid format."""
     if len(message) > 140:
         print("Message must be 140 characters or fewer.")
-        sys.exit(1)
 
     if not all(char.islower() or char.isspace() for char in message):
         print("Message must consist only of lowercase letters and spaces.")
-        sys.exit(1)
 
     return message
 
@@ -63,7 +60,10 @@ def post_message(url: str, message: str) -> None:
         response.raise_for_status()  # Ensure we catch HTTP errors
     except requests.exceptions.RequestException as e:
         print(f"Error posting message to {url}: {e}")
-        sys.exit(1)
+
+def delete_message(url:str) -> None:
+    """Deletes a message from the API."""
+    requests.delete(url,timeout=10)
 
 
 def command_line_interface_input():
@@ -95,7 +95,6 @@ if __name__ == "__main__":
             messages = storage_data.get("messages", [])
             if len(messages) >= 10:
                 print("Cannot add more than 10 messages to a storage ID.")
-                sys.exit(1)  # Exit if the message limit is reached
 
             post_message(storage_url, args.message)
             print(f"Message added to Storage ID {args.storage} successfully.")
