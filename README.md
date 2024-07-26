@@ -100,7 +100,7 @@ Create a new file named `storetoise_3.py`. Copy **all** your code from the previ
 
 `python3 storetoise_3.py --username XXXXX --storage XXX --message XXXXX` should add the given `message` to storage ID `XXX` for the given username. `-u`, `-s`, and `-m` short-form arguments should be accepted.
 
-- If the task is successful, print `Message added to Storage 'XXX' successfully.`
+- If the task is successful, print `Cannot add more than 10 messages to a storage ID.`
 - If a non-existent storage ID is requested, it should be automatically created.
 - If an invalid storage ID (not a 3-digit integer) is requested, print the exact message `Storage ID must be a three-digit integer.`
 - If the message has over 140 characters, print the exact message `Message must be 140 characters or fewer.`

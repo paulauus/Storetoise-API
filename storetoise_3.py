@@ -8,9 +8,12 @@ BASE_URL = "http://storetoise-lb-1365832025.eu-west-2.elb.amazonaws.com"
 
 def load_storetoise_data(url: str) -> dict:
     """Loads the JSON data from the base URL."""
-    response = requests.get(url, timeout=10)
-    response.raise_for_status()  # Raises an HTTPError for bad responses
-    return response.json()
+    try:
+        response = requests.get(url, timeout=10)
+        response.raise_for_status()  # Raises an HTTPError for bad responses
+        return response.json()
+    except requests.exceptions.RequestException as e:
+        print(f"Error fetching data from {url}: {e}")
 
 
 def print_storage_ids(data: dict, number: int | None = None) -> None:
@@ -39,29 +42,24 @@ def valid_storage_id(input_storage_id: str) -> int:
     print("Storage ID must be a three-digit integer.")
 
 
-def display_messages(data: dict, storage_id: int) -> None:
-    """Prints messages stored under the given storage ID."""
-    messages = data.get("messages", [])  # Must be in a list
-    if not messages:
-        print(f"No messages found for storage ID {storage_id}.")
-        return
-    for i, message in enumerate(messages):
-        print(f"{i}) {message}")
-
-
 def valid_message(message: str) -> str:
     """Checks the provided message is in a valid format."""
-    if message:
-        if len(message) > 140:
-            print("Message must be 140 characters or fewer.")
-        for char in message:
-            if not (char.islower() or char.isspace()):
-                print("Message must consist only of lowercase letters and spaces.")
-        return message
-    
-def post_message(url:str, message:str) -> None:
-    """Posts a message to the given url."""
-    requests.post(url, json={"message: message"}, timeout=10)
+    if len(message) > 140:
+        print("Message must be 140 characters or fewer.")
+
+    if not all(char.islower() or char.isspace() for char in message):
+        print("Message must consist only of lowercase letters and spaces.")
+
+    return message
+
+
+def post_message(url: str, message: str) -> None:
+    """Posts a message to the given URL."""
+    try:
+        response = requests.post(url, json={"message": message}, timeout=10)
+        response.raise_for_status()  # Ensure we catch HTTP errors
+    except requests.exceptions.RequestException as e:
+        print(f"Error posting message to {url}: {e}")
 
 
 def command_line_interface_input():
@@ -73,7 +71,7 @@ def command_line_interface_input():
     parser.add_argument("--username", "-u", required=True)
     parser.add_argument("--number", "-n", type=valid_value)
     parser.add_argument("--storage", "-s", type=valid_storage_id)
-    parser.add_argument("--message", "-m")
+    parser.add_argument("--message", "-m", type=valid_message)
     args = parser.parse_args()
     return args
 
@@ -83,18 +81,15 @@ if __name__ == "__main__":
     user_url = f"{BASE_URL}/storage/{args.username}"
     loaded_data = load_storetoise_data(user_url)
     print_storage_ids(loaded_data, args.number)
+
     if args.storage:
         storage_url = f"{user_url}/{args.storage}"
         storage_data = load_storetoise_data(storage_url)
+
         if args.message:
+            messages = storage_data.get("messages", [])
+            if len(messages) >= 10:
+                print("Cannot add more than 10 messages to a storage ID.")
+
             post_message(storage_url, args.message)
-
-
-
-
-        if str(args.storage) not in loaded_data["ids"]:
-            print("Cannot get messages for a non-existent storage ID.")
-        else:
-            storage_url = f"{user_url}/{args.storage}"
-            storage_data = load_storetoise_data(storage_url)
-            display_messages(storage_data, args.storage)
+            print(f"Message added to Storage ID {args.storage} successfully.")
