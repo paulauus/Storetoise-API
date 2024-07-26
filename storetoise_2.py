@@ -41,7 +41,7 @@ def valid_storage_id(input_storage_id: str) -> int:
 
 def display_messages(data: dict, storage_id: int) -> None:
     """Prints messages stored under the given storage ID."""
-    messages = data.get("messages", [])
+    messages = data.get("messages", []) # Must be in a list
     if not messages:
         print(f"No messages found for storage ID {storage_id}.")
         return
