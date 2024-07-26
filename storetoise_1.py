@@ -14,7 +14,10 @@ def load_storetoise_data(url: str) -> dict:
 def print_storage_ids(data: dict, number:int | None=None) -> None:
   """Prints the storage IDs listed for a user."""
   storage_ids = data["ids"]
-  if 
+  if number:
+    limit = min(number, len(storage_ids))
+    for id in sorted(storage_ids[:limit]):
+      print(id)
 
   for id in sorted(storage_ids):
     print(id)
@@ -39,5 +42,8 @@ def command_line_interface_input():
   return args
 
 if __name__ == "__main__":
-
+  args = command_line_interface_input()
+  user_url = f"{BASE_URL}/storage/{args.username}"
+  loaded_data = load_storetoise_data(user_url)
+  print_storage_ids(loaded_data, args.number)
   pass
