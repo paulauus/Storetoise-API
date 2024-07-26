@@ -76,6 +76,7 @@ def command_line_interface_input():
     parser.add_argument("--number", "-n", type=valid_value)
     parser.add_argument("--storage", "-s", type=valid_storage_id)
     parser.add_argument("--message", "-m", type=valid_message)
+    parser.add_argument("--delete", "-d")
     args = parser.parse_args()
     return args
 
