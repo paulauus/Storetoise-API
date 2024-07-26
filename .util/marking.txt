@@ -3,17 +3,43 @@ platform linux -- Python 3.12.4, pytest-8.3.2, pluggy-1.5.0
 rootdir: /home/runner/work/Assessment-Networking-Week-1/Assessment-Networking-Week-1
 collected 56 items
 
-test_challenge_1.py FFFFFFFFFFFFFF                                       [ 25%]
+test_challenge_1.py ..............                                       [ 25%]
 test_challenge_2.py FFFFFFFFFFFFF                                        [ 48%]
 test_challenge_3.py FFFFFFFFFFFFFF                                       [ 73%]
 test_challenge_4.py FFFFFFFFFFFFFFF                                      [100%]
 
-============================== 56 failed in 3.24s ==============================
+======================== 42 failed, 14 passed in 5.20s =========================
 ************* Module storetoise_1
+storetoise_1.py:9:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
 storetoise_1.py:10:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
-storetoise_1.py:3:0: W0611: Unused ArgumentParser imported from argparse (unused-import)
-storetoise_1.py:4:0: W0611: Unused import requests (unused-import)
+storetoise_1.py:11:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+storetoise_1.py:12:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+storetoise_1.py:15:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+storetoise_1.py:16:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+storetoise_1.py:17:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+storetoise_1.py:18:0: W0311: Bad indentation. Found 4 spaces, expected 8 (bad-indentation)
+storetoise_1.py:19:0: W0311: Bad indentation. Found 4 spaces, expected 8 (bad-indentation)
+storetoise_1.py:20:0: W0311: Bad indentation. Found 6 spaces, expected 12 (bad-indentation)
+storetoise_1.py:21:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+storetoise_1.py:22:0: W0311: Bad indentation. Found 4 spaces, expected 8 (bad-indentation)
+storetoise_1.py:23:0: W0311: Bad indentation. Found 6 spaces, expected 12 (bad-indentation)
+storetoise_1.py:29:0: W0311: Bad indentation. Found 6 spaces, expected 8 (bad-indentation)
+storetoise_1.py:30:0: W0311: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
+storetoise_1.py:31:0: W0311: Bad indentation. Found 6 spaces, expected 8 (bad-indentation)
+storetoise_1.py:34:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+storetoise_1.py:37:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+storetoise_1.py:38:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+storetoise_1.py:39:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+storetoise_1.py:40:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+storetoise_1.py:41:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+storetoise_1.py:44:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+storetoise_1.py:45:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+storetoise_1.py:46:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+storetoise_1.py:47:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+storetoise_1.py:19:8: W0622: Redefining built-in 'id' (redefined-builtin)
+storetoise_1.py:26:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+storetoise_1.py:40:2: W0621: Redefining name 'args' from outer scope (line 44) (redefined-outer-name)
 
 ------------------------------------------------------------------
-Your code has been rated at 4.00/10 (previous run: 4.00/10, +0.00)
+Your code has been rated at 0.94/10 (previous run: 0.94/10, +0.00)
 
