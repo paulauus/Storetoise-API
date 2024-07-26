@@ -98,3 +98,10 @@ if __name__ == "__main__":
 
             post_message(storage_url, args.message)
             print(f"Message added to Storage ID {args.storage} successfully.")
+
+        if args.delete:
+            if str(args.storage) in loaded_data_data["ids"]:
+                delete_message(id_url)
+                print(f"Storage ID {args.storage} deleted successfully.")
+            else:
+                print("Cannot delete a non-existent storage ID.")
