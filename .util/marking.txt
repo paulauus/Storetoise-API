@@ -4,42 +4,67 @@ rootdir: /home/runner/work/Assessment-Networking-Week-1/Assessment-Networking-We
 collected 56 items
 
 test_challenge_1.py ..............                                       [ 25%]
-test_challenge_2.py FFFFFFFFFFFFF                                        [ 48%]
+test_challenge_2.py .............                                        [ 48%]
 test_challenge_3.py FFFFFFFFFFFFFF                                       [ 73%]
 test_challenge_4.py FFFFFFFFFFFFFFF                                      [100%]
 
-======================== 42 failed, 14 passed in 5.20s =========================
+======================== 29 failed, 27 passed in 11.51s ========================
 ************* Module storetoise_1
-storetoise_1.py:9:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
 storetoise_1.py:10:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
 storetoise_1.py:11:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
 storetoise_1.py:12:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
-storetoise_1.py:15:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
-storetoise_1.py:16:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+storetoise_1.py:13:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
 storetoise_1.py:17:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
-storetoise_1.py:18:0: W0311: Bad indentation. Found 4 spaces, expected 8 (bad-indentation)
-storetoise_1.py:19:0: W0311: Bad indentation. Found 4 spaces, expected 8 (bad-indentation)
-storetoise_1.py:20:0: W0311: Bad indentation. Found 6 spaces, expected 12 (bad-indentation)
-storetoise_1.py:21:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
-storetoise_1.py:22:0: W0311: Bad indentation. Found 4 spaces, expected 8 (bad-indentation)
-storetoise_1.py:23:0: W0311: Bad indentation. Found 6 spaces, expected 12 (bad-indentation)
-storetoise_1.py:29:0: W0311: Bad indentation. Found 6 spaces, expected 8 (bad-indentation)
-storetoise_1.py:30:0: W0311: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
+storetoise_1.py:18:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+storetoise_1.py:19:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+storetoise_1.py:20:0: W0311: Bad indentation. Found 4 spaces, expected 8 (bad-indentation)
+storetoise_1.py:21:0: W0311: Bad indentation. Found 4 spaces, expected 8 (bad-indentation)
+storetoise_1.py:22:0: W0311: Bad indentation. Found 6 spaces, expected 12 (bad-indentation)
+storetoise_1.py:23:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+storetoise_1.py:24:0: W0311: Bad indentation. Found 4 spaces, expected 8 (bad-indentation)
+storetoise_1.py:25:0: W0311: Bad indentation. Found 6 spaces, expected 12 (bad-indentation)
 storetoise_1.py:31:0: W0311: Bad indentation. Found 6 spaces, expected 8 (bad-indentation)
-storetoise_1.py:34:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+storetoise_1.py:32:0: W0311: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
+storetoise_1.py:33:0: W0311: Bad indentation. Found 6 spaces, expected 8 (bad-indentation)
 storetoise_1.py:37:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
-storetoise_1.py:38:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
-storetoise_1.py:39:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
-storetoise_1.py:40:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
 storetoise_1.py:41:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+storetoise_1.py:42:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+storetoise_1.py:43:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
 storetoise_1.py:44:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
 storetoise_1.py:45:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
-storetoise_1.py:46:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
-storetoise_1.py:47:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
-storetoise_1.py:19:8: W0622: Redefining built-in 'id' (redefined-builtin)
-storetoise_1.py:26:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
-storetoise_1.py:40:2: W0621: Redefining name 'args' from outer scope (line 44) (redefined-outer-name)
+storetoise_1.py:48:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+storetoise_1.py:49:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+storetoise_1.py:50:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+storetoise_1.py:51:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+storetoise_1.py:21:8: W0622: Redefining built-in 'id' (redefined-builtin)
+storetoise_1.py:28:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+storetoise_1.py:44:2: W0621: Redefining name 'args' from outer scope (line 48) (redefined-outer-name)
+************* Module storetoise_2
+storetoise_2.py:21:12: W0622: Redefining built-in 'id' (redefined-builtin)
+storetoise_2.py:28:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+storetoise_2.py:35:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+storetoise_2.py:61:4: W0621: Redefining name 'args' from outer scope (line 66) (redefined-outer-name)
+storetoise_2.py:1:0: R0801: Similar lines in 2 files
+==storetoise_1:[43:51]
+==storetoise_2:[60:69]
+    args = parser.parse_args()
+    return args
+
+
+if __name__ == "__main__":
+    args = command_line_interface_input()
+    user_url = f"{BASE_URL}/storage/{args.username}"
+    loaded_data = load_storetoise_data(user_url)
+    print_storage_ids(loaded_data, args.number) (duplicate-code)
+storetoise_2.py:1:0: R0801: Similar lines in 2 files
+==storetoise_1:[17:22]
+==storetoise_2:[17:22]
+    storage_ids = data["ids"]
+    if number:
+        limit = min(number, len(storage_ids))
+        for id in sorted(storage_ids[:limit]):
+            print(id) (duplicate-code)
 
 ------------------------------------------------------------------
-Your code has been rated at 0.94/10 (previous run: 0.94/10, +0.00)
+Your code has been rated at 5.62/10 (previous run: 5.62/10, +0.00)
 
